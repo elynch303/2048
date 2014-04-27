@@ -153,31 +153,12 @@
   <!-- Pares js  -->
   <script type="text/javascript">
     Parse.initialize("XjGlG8zGEcf8UYhOGLQRYCkmss8BRSNXKo99kSyC", "yA4neI4Mf6vwMtRXw0R1oZheginMoM998d3qnBVy");
-    
-    // function loginSuccessCallback(user) {
-    //   console.log('Successful login', user);
-    //   if( !user.existed() ) {
-    //     setupNewParseUser();
-    //   } else {
-    //     createMenu();
-    //   }
-    // }
+    var BeerObject = Parse.Object.extend("BeerObject"); 
 
-    // function loginErrorCallback(error) {
-    //   console.error('Login error', error);
-    // }
-
-    // function parseSuccessCallback(object) {
-    //   console.log('Parse Success:', object);
-    // }
-
-    // function parseErrorCallback(error) {
-    //   console.error('Parse Error:', error);
-    // }
-    // function setupNewParseUser() {
-    //   Parse.User.current().save({
-    //     }).then( createMenu, parseErrorCallback );
-    // }
+    var beer = new BeerObject();
+    beer.set("name","FooBeer");
+    beer.set("brewer","Me, Myself, and I");
+    beer.set("abv",9.2);
   </script>
 
 <!--
