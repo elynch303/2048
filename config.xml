@@ -64,10 +64,10 @@
     <!-- 
         <gap:plugin name="com.phonegap.plugins.barcodescanner" />
     -->
-    <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.4.0">
+    <!-- <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.4.0">
         <param name="APP_ID" value="766196756745086" />
         <param name="APP_NAME" value="2048" />
-    </gap:plugin>
+    </gap:plugin> -->
 
     <!-- Define app icon for each platform. 
     <icon src="icon.png" />
