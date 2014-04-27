@@ -153,12 +153,24 @@
   <!-- Pares js  -->
   <script type="text/javascript">
     Parse.initialize("XjGlG8zGEcf8UYhOGLQRYCkmss8BRSNXKo99kSyC", "yA4neI4Mf6vwMtRXw0R1oZheginMoM998d3qnBVy");
-    var BeerObject = Parse.Object.extend("BeerObject"); 
-
-    var beer = new BeerObject();
-    beer.set("name","FooBeer");
-    beer.set("brewer","Me, Myself, and I");
-    beer.set("abv",9.2);
+    
+    var user = new Parse.User();
+user.set("username", "my name");
+user.set("password", "my pass");
+user.set("email", "email@example.com");
+ 
+// other fields can be set just like with Parse.Object
+user.set("phone", "415-392-0202");
+ 
+user.signUp(null, {
+  success: function(user) {
+    // Hooray! Let them use the app now.
+  },
+  error: function(user, error) {
+    // Show the error message somewhere and let the user try again.
+    alert("Error: " + error.code + " " + error.message);
+  }
+});
   </script>
 
 <!--
