@@ -16,11 +16,16 @@
     <author href="https://build.phonegap.com" email="support@phonegap.com">
         Evan Lynch 
     </author>
-        
+    
+    <gap:platform name="ios" />
+    <gap:platform name="android" />
+    <gap:platform name="winphone" />
     <!-- Plugins -->
+<!--
     <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.4.0">
         <param name="APP_ID" value="766196756745086" />
         <param name="APP_NAME" value="2048" />
     </gap:plugin>
 
+-->
 </widget>
