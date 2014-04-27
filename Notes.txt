@@ -1,0 +1,12 @@
+FB canves app lives hear https://social2048.parseapp.com/hello/
+
+css js and assets live in public index lives in cloud/views
+
+temp notes 
+
+to post to wall
+
+// change to be called on click for share score or somting
+FB.login(function(){
+ FB.api('/me/feed', 'post', {message: 'Hello, world!'});
+}, {scope: 'publish_actions'});
