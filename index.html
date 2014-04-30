@@ -26,9 +26,15 @@
   <!-- phonegap -->
   <script src="phonegap.js"></script>
   <script src="cordova.js"></script>
+  <!-- phonegap ligs -->
+  <script type='application/javascript' src='/path/to/fastclick.js'></script>
   
 </head>
 <body>
+start fastclike
+<script type="text/javascript"> window.addEventListener('load', function() {
+    FastClick.attach(document.body);
+}, false);</script>
   <div class="container">
     <div class="heading">
       <h1 class="title">2048</h1>
