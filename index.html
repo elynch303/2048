@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <title>2048</title>
 
-  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link href="style/main.css" rel="stylesheet" type="text/css" title="light">
+  <link href="style/main_dark.css" rel="alternate stylesheet" type="text/css" title="dark">
   <link href="style/ads.css" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
@@ -17,6 +18,15 @@
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+	
+  <!-- Facebook metadata -->
+  <meta property="og:title" content="2048"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://apps.facebook.com/766196756745086/"/>
+  <meta property="og:image" content="https://social2048.parseapp.com/img/OG-FB-Meta-image.jpg"/>
+  <meta property="og:site_name" content="2048"/>
+  <meta property="fb:app_id" content="766196756745086"/>
+  <meta property="og:description" content="A small clone of 1024, based on Saming's 2048 (also a clone)."/>
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script type="text/javascript" src="https://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
@@ -30,8 +40,8 @@
   <script type='application/javascript' src='/path/to/fastclick.js'></script>
   
 </head>
-<body>
-start fastclike
+<body onload="set_style_from_cookie()">
+<!-- start fastclike -->
 <script type="text/javascript"> window.addEventListener('load', function() {
     FastClick.attach(document.body);
 }, false);</script>
@@ -93,7 +103,11 @@ start fastclike
     <p class="game-explanation">
       <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
     </p>
-   
+    <!-- theam switcher -->
+   	<form>
+      <input type="submit" onclick="switch_style('light');return false;" name="theme" value="Light Theme" id="light">
+      <input type="submit" onclick="switch_style('dark');return false;" name="theme" value="Dark Theme" id="dark">
+    </form>
   </div>
   
  
